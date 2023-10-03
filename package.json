@@ -9,7 +9,9 @@
     "start": "node build/server.cjs",
     "build": "tsup src --out-dir build",
     "test": "vitest",
-    "test:only": "vitest run"
+    "test:only": "vitest run",
+    "test:cov": "vitest run --coverage",
+    "test:ui": "vitest --ui"
   },
   "keywords": [],
   "author": "JeffersonLacerda",
@@ -19,6 +21,8 @@
     "@types/bcrypt": "5.0.0",
     "@types/bcryptjs": "2.4.4",
     "@types/node": "^20.8.2",
+    "@vitest/coverage-v8": "0.34.6",
+    "@vitest/ui": "0.34.6",
     "eslint": "8.50.0",
     "prisma": "5.3.1",
     "tsup": "^7.2.0",
