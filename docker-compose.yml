@@ -1,0 +1,14 @@
+version: "3"
+services:
+  api-solid-pg:
+    container_name: api-solid-pg
+    restart: always
+    image: bitnami/postgresql:latest
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRESQL_USERNAME=Docker
+      - POSTGRESQL_PASSWORD=Docker
+      - POSTGRESQL_DATABASE=api_solid_db
+    networks:
+      - api-solid-network
