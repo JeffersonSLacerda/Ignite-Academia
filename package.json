@@ -13,7 +13,9 @@
   "author": "JeffersonLacerda",
   "license": "ISC",
   "devDependencies": {
+    "@rocketseat/eslint-config": "2.1.0",
     "@types/node": "^20.8.2",
+    "eslint": "8.50.0",
     "tsup": "^7.2.0",
     "tsx": "^3.13.0",
     "typescript": "^5.2.2"
