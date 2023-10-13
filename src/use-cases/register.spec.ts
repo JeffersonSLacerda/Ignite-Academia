@@ -1,4 +1,4 @@
-import {expect, describe, it, beforeEach} from 'vitest'
+import {expect, describe, it, beforeEach, afterEach, vi} from 'vitest'
 import { RegisterUseCase } from './register'
 import { compare } from 'bcrypt'
 import { InMemoryUsersRepository } from '@/repositories/in-memory/users-repository'
@@ -11,6 +11,12 @@ describe('#Register UseCase', () =>{
     usersRepository = new InMemoryUsersRepository()
     sut = new RegisterUseCase(usersRepository)
   })
+
+  afterEach(() => {
+    vi.useRealTimers()
+    usersRepository.clean()
+  })
+  
   it('should be able to insert data correctly', async () => {
     const { user } = await sut.execute({
       name: 'John Doe',

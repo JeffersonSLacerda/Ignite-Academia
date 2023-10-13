@@ -37,4 +37,8 @@ export class InMemoryCheckInsRepository implements CheckInsRepository{
 
     return checkInOnSameDate
   }
+
+  clean() {
+    return this.items.splice(0, this.items.length)
+  }
 }

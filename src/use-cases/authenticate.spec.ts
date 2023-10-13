@@ -1,5 +1,5 @@
 import { InMemoryUsersRepository } from '@/repositories/in-memory/users-repository'
-import {describe, it, expect, beforeEach} from 'vitest'
+import {describe, it, expect, beforeEach, afterEach, vi} from 'vitest'
 import { AuthenticateUseCase } from './authenticate'
 import { InvalidCredentialsError } from './errors/invalid-credentials-error'
 
@@ -10,6 +10,10 @@ describe('#Authentication UseCase', () => {
   beforeEach(() => {
     usersRepository = new InMemoryUsersRepository()
     sut = new AuthenticateUseCase(usersRepository)
+  })
+
+  afterEach(() => {
+    usersRepository.clean()
   })
 
   it('should be able to login with valid credentials', async () =>{

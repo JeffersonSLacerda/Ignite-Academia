@@ -42,7 +42,7 @@ describe('#Check-in Use Case', () =>{
 
   afterEach(() => {
     vi.useRealTimers()
-    // gymsRepository.clean()
+    gymsRepository.clean()
   })
 
   it('should be able to check in', async () => {
