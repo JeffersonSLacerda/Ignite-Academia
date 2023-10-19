@@ -1,0 +1,8 @@
+HTTP/1.1 409 Conflict
+content-type: application/json; charset=utf-8
+content-length: 38
+Date: Thu, 19 Oct 2023 19:04:12 GMT
+Connection: keep-alive
+Keep-Alive: timeout=72
+
+{"message":"❌ User already exists!"}
