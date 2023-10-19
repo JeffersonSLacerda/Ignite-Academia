@@ -1,8 +1,0 @@
-HTTP/1.1 200 OK
-content-type: application/json; charset=utf-8
-content-length: 177
-Date: Thu, 19 Oct 2023 19:24:37 GMT
-Connection: keep-alive
-Keep-Alive: timeout=72
-
-{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzQ0MmYyZS1jMjUyLTRjZjctYjg1MS0yN2U1OWNkNzk5N2IiLCJpYXQiOjE2OTc3NDM0Nzd9.rvMrU-AReGJIm8daDYvpOBP-nM-ue-pJxZIGv90RnHI"}
