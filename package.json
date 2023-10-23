@@ -8,7 +8,9 @@
     "start:dev": "tsx watch src/server.ts",
     "start": "node build/server.cjs",
     "build": "tsup src --out-dir build",
-    "test": "vitest",
+    "test": "vitest --dir src/use-cases",
+    "": "",
+    "test:e2e": "vitest run --dir src/http",
     "test:only": "vitest run",
     "test:cov": "vitest run --coverage",
     "test:ui": "vitest --ui"
@@ -40,6 +42,6 @@
     "fastify": "^4.23.2",
     "jsonwebtoken": "9.0.2",
     "node-gyp": "9.4.0",
-    "zod": "3.22.2"
+    "zod": "3.22.4"
   }
 }
