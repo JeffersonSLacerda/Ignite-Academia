@@ -17,7 +17,7 @@ export class ValidateCheckInUseCase{
     private checkInsRepository: CheckInsRepository
   ){}
 
-  async execute({ checkInId }: ValidateCheckInRequest) {
+  async execute({ checkInId }: ValidateCheckInRequest): Promise<ValidateCheckInResponse> {
     const checkIn  = await this.checkInsRepository.findById(checkInId)
 
     if(!checkIn) throw new ResourceNotFoundError()
@@ -29,6 +29,7 @@ export class ValidateCheckInUseCase{
 
     if(distanceInMinutesFromCheckInCreation > 20) throw new LateCheckInValidationError();
     
+    console.log('use Case ', checkIn)
 
     checkIn.validated_at = new Date()
 
