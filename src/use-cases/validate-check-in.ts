@@ -29,8 +29,6 @@ export class ValidateCheckInUseCase{
 
     if(distanceInMinutesFromCheckInCreation > 20) throw new LateCheckInValidationError();
     
-    console.log('use Case ', checkIn)
-
     checkIn.validated_at = new Date()
 
     this.checkInsRepository.save(checkIn)
